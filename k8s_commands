@@ -1,0 +1,7 @@
+kubectl create -f helloworld.yaml
+kubectl describe pod nodehelloworld.example.com
+kubectl port-forward nodehelloworld.example.com 8081:3000
+curl localhost:8081
+kubectl expose pod nodehelloworld.example.com --type=NodePort --name 
+nodehelloworld-service
+kubectl get service
